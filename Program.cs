@@ -1,6 +1,6 @@
 ﻿using Pinecone;
 
-var pinecone = new PineconeClient("0ce2cbb5-7392-4574-b386-89336d7dde41");
+var pinecone = new PineconeClient("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 var index = await pinecone.CreateIndexAsync(new CreateIndexRequest
 {
