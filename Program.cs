@@ -1,25 +1,25 @@
 ﻿using Pinecone;
 
-var pinecone = new PineconeClient("0ce2cbb5-7392-4574-b386-89336d7dde41");
+var pinecone = new PineconeClient("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
-var index = await pinecone.CreateIndexAsync(new CreateIndexRequest
-{
-    Name = "example-index",
-    Dimension = 1538,
-    Metric = CreateIndexRequestMetric.Cosine,
-    Spec = new ServerlessIndexSpec
-    {
-        Serverless = new ServerlessSpec
-        {
-            Cloud = ServerlessSpecCloud.Azure,
-            Region = "eastus2",
-        }
-    },
-    DeletionProtection = DeletionProtection.Enabled
-});
+//var index = await pinecone.CreateIndexAsync(new CreateIndexRequest
+//{
+//    Name = "example-index",
+//    Dimension = 1538,
+//    Metric = CreateIndexRequestMetric.Cosine,
+//    Spec = new ServerlessIndexSpec
+//    {
+//        Serverless = new ServerlessSpec
+//        {
+//            Cloud = ServerlessSpecCloud.Azure,
+//            Region = "eastus2",
+//        }
+//    },
+//    DeletionProtection = DeletionProtection.Enabled
+//});
 
 //Once you created the index, then use the following code: 
-//var index = pinecone.Index("example-index");
+var index = pinecone.Index("example-index");
 
 if (index == null)
 {
